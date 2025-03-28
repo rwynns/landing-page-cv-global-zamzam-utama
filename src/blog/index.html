@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ubah path CSS untuk menggunakan file yang sama dengan halaman utama -->
+    <link href="../output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../node_modules/aos/dist/aos.css" />
+    <title>Blog - CV Global Zamzam Utama</title>
+  </head>
+  <body class="bg-gray-50 font-montserrat">
+    <!-- Navbar -->
+    <div class="navbar bg-gradient-to-r from-red-600 to-red-700 text-white shadow-lg sticky top-0 z-50">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </label>
+          <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-red-600 rounded-box w-52">
+            <li><a href="../index.html">Beranda</a></li>
+            <li><a href="../index.html#tentang-kami">Tentang Kami</a></li>
+            <li><a>Katalog</a></li>
+            <li><a>Belanja</a></li>
+            <li><a class="active">Blog</a></li>
+            <li><a>Hubungi Kami</a></li>
+          </ul>
+        </div>
+        <a href="../index.html" class="btn btn-ghost normal-case text-xl font-bold">CV Global Zamzam Utama</a>
+      </div>
+      <div class="navbar-end hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 text-lg gap-1">
+          <li><a href="../index.html" class="hover:bg-red-500 hover:font-medium rounded-lg">Beranda</a></li>
+          <li><a href="../index.html#tentang-kami" class="hover:bg-red-500 hover:font-medium rounded-lg">Tentang Kami</a></li>
+          <li><a class="hover:bg-red-500 hover:font-medium rounded-lg">Katalog</a></li>
+          <li><a class="hover:bg-red-500 hover:font-medium rounded-lg">Belanja</a></li>
+          <li><a class="hover:bg-red-500 hover:font-medium rounded-lg bg-red-500 font-medium">Blog</a></li>
+          <li><a class="hover:bg-red-500 hover:font-medium rounded-lg">Hubungi Kami</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Blog Header Section -->
+    <div class="bg-white relative overflow-hidden py-16">
+      <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(circle, #ef4444 2px, transparent 2px); background-size: 20px 20px"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center mb-12" data-aos="fade-down" data-aos-duration="800">
+          <h1 class="text-5xl font-bold text-red-600">Blog Edukasi</h1>
+          <div class="h-1 w-24 bg-red-600 mx-auto mt-4"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto mt-4">Temukan berbagai artikel informatif seputar alat peraga edukatif dan metode pembelajaran modern untuk meningkatkan kualitas pendidikan.</p>
+        </div>
+
+        <!-- Blog Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Blog Card 1 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="0">
+            <img src="../img/company.jpg" alt="Blog Image" class="w-full h-56 object-cover" />
+            <div class="p-6 flex flex-col h-64">
+              <div class="h-40">
+                <!-- Fixed height container for title and description -->
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Pentingnya Alat Peraga dalam Pembelajaran STEM</h3>
+                <p class="text-gray-600 mb-4 line-clamp-4">Mengenal berbagai alat peraga yang dapat mendukung pembelajaran STEM (Science, Technology, Engineering, Mathematics) secara efektif.</p>
+              </div>
+              <div class="mt-auto">
+                <a href="/src/blog/artikel1.html" class="inline-block text-red-600 font-medium hover:text-red-700 transition-colors"> Baca Selengkapnya → </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 2 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="100">
+            <img src="../img/company.jpg" alt="Blog Image" class="w-full h-56 object-cover" />
+            <div class="p-6 flex flex-col h-64">
+              <div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Self Regulated Learning: Mendidik Generasi Mandiri</h3>
+                <p class="text-gray-600 mb-4">Bagaimana metode Self Regulated Learning dapat membantu siswa mengembangkan keterampilan belajar mandiri yang efektif.</p>
+              </div>
+              <div class="mt-auto">
+                <a href="article-2.html" class="inline-block text-red-600 font-medium hover:text-red-700 transition-colors"> Baca Selengkapnya → </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Card 3 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+            <img src="../img/company.jpg" alt="Blog Image" class="w-full h-56 object-cover" />
+            <div class="p-6 flex flex-col h-64">
+              <div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">Mengoptimalkan Ruang Kelas dengan Alat Peraga</h3>
+                <p class="text-gray-600 mb-4">Tips praktis bagi guru untuk memanfaatkan alat peraga edukatif dalam menciptakan suasana belajar yang kondusif.</p>
+              </div>
+              <div class="mt-auto">
+                <a href="article-3.html" class="inline-block text-red-600 font-medium hover:text-red-700 transition-colors"> Baca Selengkapnya → </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer bisa ditambahkan di sini -->
+
+    <!-- Scripts -->
+    <script src="../../node_modules/aos/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        offset: 120,
+        delay: 0,
+        duration: 800,
+        easing: "ease",
+        once: false,
+        mirror: false,
+        anchorPlacement: "top-bottom",
+      });
+    </script>
+  </body>
+</html>

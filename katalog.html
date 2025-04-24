@@ -17,22 +17,22 @@
             </svg>
           </label>
           <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-red-600 rounded-box w-52">
-            <li><a href="/">Beranda</a></li>
+            <li><a href="index.html">Beranda</a></li>
             <li><a class="active bg-red-500 font-medium" href="katalog.html">Katalog</a></li>
-            <li><a>Belanja</a></li>
-            <li><a>Blog</a></li>
-            <li><a>Hubungi Kami</a></li>
+            <li><a href="#">Belanja</a></li>
+            <li><a href="src/blog/index.html">Blog</a></li>
+            <li><a href="#hubungi-kami">Hubungi Kami</a></li>
           </ul>
         </div>
         <a class="btn btn-ghost normal-case text-xl font-bold">CV Global Zamzam Utama</a>
       </div>
       <div class="navbar-end hidden lg:flex">
         <ul class="menu menu-horizontal px-1 text-lg gap-1">
-          <li><a href="./index.html" class="hover:bg-red-500 hover:font-medium rounded-lg">Beranda</a></li>
-          <li><a class="hover:bg-red-500 hover:font-medium rounded-lg bg-red-500 font-medium">Katalog</a></li>
-          <li><a class="hover:bg-red-500 hover:font-medium rounded-lg">Belanja</a></li>
-          <li><a class="hover:bg-red-500 hover:font-medium rounded-lg">Blog</a></li>
-          <li><a class="hover:bg-red-500 hover:font-medium rounded-lg">Hubungi Kami</a></li>
+          <li><a href="index.html" class="hover:bg-red-500 hover:font-medium rounded-lg">Beranda</a></li>
+          <li><a href="katalog.html" class="hover:bg-red-500 hover:font-medium rounded-lg bg-red-500 font-medium">Katalog</a></li>
+          <li><a href="#" class="hover:bg-red-500 hover:font-medium rounded-lg">Belanja</a></li>
+          <li><a href="src/blog/index.html" class="hover:bg-red-500 hover:font-medium rounded-lg">Blog</a></li>
+          <li><a href="#hubungi-kami" class="hover:bg-red-500 hover:font-medium rounded-lg">Hubungi Kami</a></li>
         </ul>
       </div>
     </div>
@@ -347,7 +347,7 @@
           </div>
         </div>
 
-        <div class="flex justify-center mt-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-center mt-12">
           <div class="join">
             <button class="join-item btn bg-white hover:bg-red-100 text-red-600 border-red-200" id="prev-page">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -370,7 +370,7 @@
     <footer class="bg-gradient-to-r from-red-600 to-red-700 text-white">
       <div class="container mx-auto px-4 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div data-aos="fade-up" data-aos-delay="0">
+          <div>
             <h3 class="text-2xl font-bold mb-4">CV Global Zamzam Utama</h3>
             <p class="mb-4">Solusi inovatif untuk mendukung Self Regulated Learning melalui Alat Peraga Edukatif berkualitas tinggi.</p>
             <div class="flex space-x-3 mt-4">
@@ -397,7 +397,7 @@
           </div>
 
           <!-- Quick Links -->
-          <div data-aos="fade-up" data-aos-delay="100">
+          <div>
             <h3 class="text-2xl font-bold mb-4">Menu</h3>
             <ul class="space-y-2">
               <li><a href="#" class="hover:text-red-200 transition duration-300">Beranda</a></li>
@@ -409,7 +409,7 @@
           </div>
 
           <!-- Online Stores -->
-          <div data-aos="fade-up" data-aos-delay="200">
+          <div>
             <h3 class="text-2xl font-bold mb-4">Toko Online</h3>
             <ul class="space-y-4">
               <li>
@@ -464,19 +464,28 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+        // Initialize AOS with modified settings
         AOS.init({
-          offset: 120,
+          offset: 80, // Smaller offset to trigger earlier
           delay: 0,
           duration: 800,
           easing: "ease",
-          once: false,
+          once: true, // Changed to true - animate only once
           mirror: false,
           anchorPlacement: "top-bottom",
         });
-      });
 
-      // Pagination functionality
-      document.addEventListener("DOMContentLoaded", function () {
+        // Fallback to ensure footer and pagination are visible
+        setTimeout(function () {
+          document.querySelectorAll(".join, footer [data-aos]").forEach((el) => {
+            el.classList.add("aos-animate");
+            el.removeAttribute("data-aos");
+            el.removeAttribute("data-aos-delay");
+            el.style.opacity = "1";
+          });
+        }, 2000);
+
+        // Rest of your pagination code...
         // Wait a brief moment to ensure DOM is fully processed
         setTimeout(function () {
           // Get all product cards
